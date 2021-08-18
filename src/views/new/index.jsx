@@ -33,7 +33,7 @@ export default class NewBlogPost extends Component {
 
   sendForm = async (e) => {
     e.preventDefault()
-    const res = await fetch("https://my-strive-blog.herokuapp.com/blogPost", {
+    const res = await fetch(process.env.REACT_APP_PROD_API_URL + "/blogPost", {
       method: 'POST',
       body: JSON.stringify(this.state),
       headers: {
