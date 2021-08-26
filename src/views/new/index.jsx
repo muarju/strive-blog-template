@@ -15,8 +15,8 @@ export default class NewBlogPost extends Component {
         unit: "minute"
       },
       author: {
-        name: "",
-        avatar: ""
+        name: "Muslim Uddin Arju",
+        avatar: "https://muarju.github.io/images/me.png"
       }
     };
 
@@ -75,14 +75,6 @@ export default class NewBlogPost extends Component {
           <Form.Group controlId="blog-form" className="mt-3">
             <Form.Label>Cover</Form.Label>
             <Form.Control size="lg" placeholder="Cover" onChange={(event) => this.handleChange(event.target.value, 'cover')} />
-          </Form.Group>
-          <Form.Group controlId="blog-form" className="mt-3">
-            <Form.Label>Author Name</Form.Label>
-            <Form.Control size="lg" placeholder="Author Name" onChange={(event) => this.handleChange(event.target.value, 'author.name')} />
-          </Form.Group>
-          <Form.Group controlId="blog-form" className="mt-3">
-            <Form.Label>Author Avatar</Form.Label>
-            <Form.Control size="lg" placeholder="Author Name" onChange={(event) => this.handleChange(event.target.value, 'author.avatar')} />
           </Form.Group>
           <Form.Group className="d-flex mt-3 justify-content-end">
             <Button type="reset" size="lg" variant="outline-dark">
