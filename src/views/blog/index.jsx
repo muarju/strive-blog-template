@@ -12,6 +12,7 @@ class Blog extends Component {
   componentDidMount = async () => {
     const { id } = this.props.match.params;
     let blog = await fetch(process.env.REACT_APP_PROD_API_URL + '/blogPost/' + id)
+    console.log(blog)
     if (blog) {
       this.setState({ blog, loading: false });
     } else {
