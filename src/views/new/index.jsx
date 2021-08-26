@@ -9,14 +9,14 @@ export default class NewBlogPost extends Component {
     super(props);
     this.state = {
       content: "",
-      cover: "linkurl hardcoded",
+      cover: "",
       readTime: {
         value: 2,
         unit: "minute"
       },
       author: {
-        name: "hardCoded",
-        avatar: "hardCoded"
+        name: "",
+        avatar: ""
       }
     };
 
@@ -47,8 +47,6 @@ export default class NewBlogPost extends Component {
     
   }
 
-
-
   render() {
     return (
       <Container className="new-blog-container">
@@ -60,11 +58,9 @@ export default class NewBlogPost extends Component {
           <Form.Group controlId="blog-category" className="mt-3">
             <Form.Label>Category</Form.Label>
             <Form.Control size="lg" as="select" onChange={(event) => this.handleChange(event.target.value, 'category')}>
-              <option value="cat1">Category1</option>
-              <option value="cat2">Category2</option>
-              <option value="cat3">Category3</option>
-              <option value="cat4">Category4</option>
-              <option value="cat5">Category5</option>
+              <option value="Pogramming">Pogramming</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Digital Marketing">Digital Marketing</option>
             </Form.Control>
           </Form.Group>
           <Form.Group controlId="blog-content" className="mt-3">
@@ -75,6 +71,18 @@ export default class NewBlogPost extends Component {
               onChange={(value) => this.handleChange(value, 'content')}
               className="new-blog-content"
             />
+          </Form.Group>
+          <Form.Group controlId="blog-form" className="mt-3">
+            <Form.Label>Cover</Form.Label>
+            <Form.Control size="lg" placeholder="Cover" onChange={(event) => this.handleChange(event.target.value, 'cover')} />
+          </Form.Group>
+          <Form.Group controlId="blog-form" className="mt-3">
+            <Form.Label>Author Name</Form.Label>
+            <Form.Control size="lg" placeholder="Author Name" onChange={(event) => this.handleChange(event.target.value, 'author.name')} />
+          </Form.Group>
+          <Form.Group controlId="blog-form" className="mt-3">
+            <Form.Label>Author Avatar</Form.Label>
+            <Form.Control size="lg" placeholder="Author Name" onChange={(event) => this.handleChange(event.target.value, 'author.avatar')} />
           </Form.Group>
           <Form.Group className="d-flex mt-3 justify-content-end">
             <Button type="reset" size="lg" variant="outline-dark">
